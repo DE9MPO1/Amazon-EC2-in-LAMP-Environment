@@ -14,7 +14,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 >Download the PuTTYgen from PuTTYgen download page.
 
 ## Lab tutorial
-#### Create Your VPC
+### Create Your VPC
 1.1.  In the **AWS Management Console**, on the **service menu**, click **VPC**.
 
 1.2. In the navigation pane, click **Your VPCs**.
@@ -67,7 +67,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 1.19. Click **Save**.
 
-#### Launch an instance
+### Launch an instance
 
 2.1. On the **service** menu,click **EC2**.
 
@@ -117,7 +117,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 2.19. On the Description tab in the lower panel, note the **Public IP** for the instance.
 
-#### Connect to your instance (Windows only)
+### Connect to your instance (Windows only)
 
 3.1. Start PuTTYgen.exe, click **Load**. By default, PuTTYgen display only files with the extension .ppk. to locate your .pem file, select the option to display files of all types.
 
@@ -145,7 +145,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ![6.png](/images/6.png)
 
-#### Connect to your instance (Linux/OSX only)
+### Connect to your instance (Linux/OSX only)
 
 >Note: This section is for Linux and Max OSX users only. If you are running Windows but have not yet connected to your instance, go back to 1.3. If you have already connected to your instance, skip ahead to next step.
 
@@ -157,7 +157,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 * For **path and name of pem**, substitute the path/filename to the .pem file you downloaded.
 * For **public IP**, substitute the public IP address for your Web Server instance which you copied into a text editor earlier in the lab.
 
-#### Installing and start the Web server on EC2
+### Installing and start the Web server on EC2
 
 5.1. Update all your software package, enter:
 	
@@ -187,7 +187,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ![8.png](/images/8.png)
 
-#### Set file permissions of Apache httpd serves
+### Set file permissions of Apache httpd serves
 
 6.1. Add your user (ex. **ec2-user**) to the **apache** group
 
