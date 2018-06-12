@@ -27,7 +27,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 1.5. In the navigation pane, click **Internet Gateways**.
 
-1.6. Click **Create Internet Gateway**, enter **Name tag: My Lab IGW**.
+1.6. Click **Create Internet Gateway**, enter Name tag: **My Lab IGW**.
 
 1.7. Choose **My Lab IGW**, click **Attach to VPC**, and then choose **My Lab VPC** you created, click **Yes, Attach**.
 
