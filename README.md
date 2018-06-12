@@ -27,38 +27,42 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 1.5. In the navigation pane, click **Internet Gateways**.
 
+<<<<<<< HEAD
+1.6. Click **Create Internet Gateway**, enter Name tag: **My Lab IGW**, then click **Create**.
+=======
 1.6. Click **Create Internet Gateway**, enter Name tag: **My Lab IGW**.
+>>>>>>> 0fb70ba9e5b39e972b38d5b768835591ebfc6af3
 
-1.7. Choose **My Lab IGW**, click **Attach to VPC**, and then choose **My Lab VPC** you created, click **Yes, Attach**.
+1.7. Choose **My Lab IGW**, click **Actions**, click **Attach to VPC**, and then choose **My Lab VPC** you created, click **Yes, Attach**.
 
 1.8. In the navigation pane, click **Subnets**.
 
 1.9. Click **Create Subnet**, enter the following details:
-* Name tag: Public Subnet 1
-* VPC: My Lab VPC
-* Availability Zone: us-east-1a
-* IPv4 CIDR block: 10.0.1.0/24
+* Name tag: **Public Subnet 1**
+* VPC: **My Lab VPC**
+* Availability Zone: **us-east-1a**
+* IPv4 CIDR block: **10.0.1.0/24**
 
 1.10. Click **Yes, Create**.
 
 1.11. Click **Create Subnet**, enter the following details:
-* Name tag: Public Subnet 2
-* VPC: My Lab VPC
-* Availability Zone: us-east-1b
-* IPv4 CIDR block: 10.0.2.0/24
+* Name tag: **Public Subnet 2**
+* VPC: **My Lab VPC**
+* Availability Zone: **us-east-1b**
+* IPv4 CIDR block: **10.0.2.0/24**
 
 1.12. Click **Yes, Create**.
 
 1.13. In the navigation pane, click **Route Tables**.
 
 1.14. Click **Create Route Table**, enter the following details:
-* Name tag: Public Route Table
-* VPC: select My Lab VPC
+* Name tag: **Public Route Table**
+* VPC: select **My Lab VPC**
 
 1.15. Click **Yes, Create**.
 
 1.16. Select the **Public Route Table** you just created, and then click **Routes** tab in the lower pane of the console, click **Edit**, click **Add another route**, enter the following details:
-* Destination: 0.0.0.0/0
+* Destination: **0.0.0.0/0**
 * Target: choose **igw-xxxxxxxx** that you created earlier
 
 1.17. Click **Save**.
@@ -78,8 +82,8 @@ The following procedures help you install an Apache web server with PHP and MySQ
 2.4. On **Step2: Choose a Instance Type** page,make sure **t2.micro** is selected and click **Next: Configure Instance Details**.
 
 2.5. On **Step3: Configure Instance Details** page, enter the following and leave all other values with their default:
-* Network: My Lab VPC
-* Subnet: Public Subnet 1
+* Network: **My Lab VPC**
+* Subnet: **Public Subnet 1**
 * Auto-assign Public IP: click **Enable**
 
 2.6. Click **Next: Add Storage**, leave all values with their default.
@@ -87,14 +91,14 @@ The following procedures help you install an Apache web server with PHP and MySQ
 2.7. Click **Next: Tag Instance**.
 
 2.8. On **Step5: Tag Instance** page, enter the following information:
-* Key: Name
-* Value: Web Server
+* Key: **Name**
+* Value: **Web Server**
 
 2.9. Click **Next: Configure Security Group**.
 
 2.10. On **Setp6: Configure Security Group** page, click **create a new security group**, enter the following information:
-* Security group name: WebServerSG
-* Description: Web Server Security Group
+* Security group name: **WebServerSG**
+* Description: **Web Server Security Group**
 
 2.11. Click **Add Rule**.
 
@@ -104,9 +108,9 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 2.13. Click **Review and Launch**.
 
-2.14. Review the instance information and click Launch.
+2.14. Review the instance information and click **Launch**.
 
-2.15. Click **Create a new key pair**, enter the **Key pair name (ex.amazonec2_keypair_oregon)**, click **Download Key Pair**.
+2.15. Click **Create a new key pair**, enter the **Key pair name (ex.amazonec2_keypair_virginia)**, click **Download Key Pair**.
 
 2.16. Click **Launch Instances**.
 
@@ -123,11 +127,11 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ![2.png](/images/2.png)
 
-3.2. Select your .pem file **(ex. amazonec2_keypair_oregon.pem)**, and then click **Open**. Click **OK** to dismiss the confirmation dialog box.
+3.2. Select your .pem file **(ex. amazonec2_keypair_virginia.pem)**, and then click **Open**. Click **OK** to dismiss the confirmation dialog box.
 
 3.3. Click **Save private key** to save the key in the format that PuTTY can use. PuTTYgen displays a warning about saving the key without a passphrase, click Yes.
 
-3.4. Specify the same name for the key that you used for the key pair **(ex. amazonec2_keypair_oregon.ppk)**. PuTTY automatically adds the .ppk extension.
+3.4. Specify the same name for the key that you used for the key pair **(ex. amazonec2_keypair_virginia.ppk)**. PuTTY automatically adds the .ppk extension.
 
 3.5. Launch **PuTTY** by running the **PuTTY.exe** file you downloaded.
 
@@ -175,12 +179,10 @@ The following procedures help you install an Apache web server with PHP and MySQ
 5.4. Use the **chkconfig** command to configure the Apache web server to start at each system boot.
 
 	[ec2-user ~]$ sudo chkconfig httpd on
+	[ec2-user ~]$ chkconfig --list httpd   
 
 * The chkconfig command does not provide any confirmation message when you successfully use it to enable a service. You can verify that httpd dos on by running the following command:
 
-	
-    [ec2-user ~]$ chkconfig --list httpd
-    
 ![7.png](/images/7.png)
 
 5.5. Test your web server. In a web browser, enter Public DNS address (or the public IP address) of your EC2; you should see the Apache test page.
@@ -215,7 +217,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 6.6. Recursively change the file permissions of /var/www and its subdirectories to add group write permissions.
 
-	[ec2-user ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;'
+	[ec2-user ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;
     
 6.7. Add a simple PHP file in the Apache document root to test LAMP web server.
 
@@ -223,7 +225,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 6.8. In a web browser, enter the URL of the file you just created. This URL is the public DNS address of your EC2, for example:
 
-	http://my.public.dns.amazonaws.com/phpinfo.php
+	http://**my.public.dns.amazonaws.com**/phpinfo.php
 
 ![10.png](/images/10.png)
 
