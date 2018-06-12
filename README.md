@@ -19,9 +19,9 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 1.2. In the navigation pane, click **Your VPCs**.
 
-1.3. Click Create VPC, enter the following details:
-* Name tag: My Lab VPC
-* IPv4 CIDR block: 10.0.0.0/16
+1.3. Click **Create VPC**, enter the following details:
+* Name tag: **My Lab VPC**
+* IPv4 CIDR block: **10.0.0.0/16**
 
 1.4. Click **Yes, Create**.
 
