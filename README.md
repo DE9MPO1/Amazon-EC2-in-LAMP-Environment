@@ -11,7 +11,6 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 >Download Putty: IF you don’t already have the **PuTTy client/PuTTYgen** installed on your machine, you can download and then launch it from here: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
->Download the PuTTYgen from PuTTYgen download page.
 
 ## Lab tutorial
 ### Create Your VPC
