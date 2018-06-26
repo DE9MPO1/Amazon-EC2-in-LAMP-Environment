@@ -146,15 +146,15 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ### Connect to your instance (Linux/OSX only)
 
->Note: This section is for Linux and Max OSX users only. If you are running Windows but have not yet connected to your instance, go back to 1.3. If you have already connected to your instance, skip ahead to next step.
+>Note: This section is for Linux and Max OSX users only. If you are running Windows but have not yet connected to your instance, go back to previous step. If you have already connected to your instance, skip ahead to next step.
 
 4.1. To connect to your EC2 instance, run the following commands in Terminal:
 	
-    chmod 400  <path and name of pem>
+	chmod 400  <path and name of pem>
 	ssh –i <path and name of pem> ec2-user@<public IP>
 
 * For **path and name of pem**, substitute the path/filename to the .pem file you downloaded.
-* For **public IP**, substitute the public IP address for your Web Server instance which you copied into a text editor earlier in the lab.
+* For **public IP**, substitute the public IP address for your **Web Server** instance which you copied into a text editor earlier in the lab.
 
 ### Installing and start the Web server on EC2
 
