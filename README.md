@@ -136,7 +136,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ![4.png](/images/4.png)
 
-3.7. In the Connection list, click **Connect>SSH>Auth**, click **Browse** to choose your key pair (ex.**amazonec2_keypair_oregon.ppk**), click **Open**.
+3.7. In the Connection list, click **Connect>SSH>Auth**, click **Browse** to choose your key pair (ex.**amazonec2_keypair_virginia.ppk**), click **Open**.
 
 ![5.png](/images/5.png)
 
