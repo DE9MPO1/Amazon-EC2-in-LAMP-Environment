@@ -185,7 +185,8 @@ The following procedures help you install an Apache web server with PHP and MySQ
 ![8.png](/images/8.png)
 
 ### Set file permissions of Apache httpd serves
-Apache **httpd** serves files that are kept in a directory called the Apache document root. The Amazon Linux Apache document root is /var/www/html, which by default is owned by root.
+Apache **httpd** serves files that are kept in a directory called the Apache document root. The Amazon Linux Apache document root is */var/www/html*, which by default is owned by root.
+To allow the *ec2-user* account to manipulate files in this directory, you must modify the ownership and permissions of the directory. There are many ways to accomplish this task. In this tutorial, you add ec2-user to the apache group, to give the apache group ownership of the */var/www* directory and assign write permissions to the group.
 
 6.1. Add your user (ex. **ec2-user**) to the **apache** group
 
