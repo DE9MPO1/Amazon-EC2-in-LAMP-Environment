@@ -180,7 +180,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ![7.png](/images/7.png)
 
-5.5. Test your web server. In a web browser, enter Public DNS address (or the public IP address) of your EC2; you should see the Apache test page.
+5.5. Test your web server n a web browser, enter Public DNS address (or the public IP address) of your EC2; you should see the Apache test page.
 
 ![8.png](/images/8.png)
 
