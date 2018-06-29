@@ -222,7 +222,7 @@ To allow the *ec2-user* account to manipulate files in this directory, you must 
 
 6.8. In a web browser, enter the URL of the file you just created. This URL is the public DNS address of your EC2, for example:
 
-	http://**my.public.dns.amazonaws.com**/phpinfo.php
+	http://my.public.dns.amazonaws.com/phpinfo.php
 
 ![10.png](/images/10.png)
 
