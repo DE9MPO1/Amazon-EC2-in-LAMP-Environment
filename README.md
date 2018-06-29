@@ -176,7 +176,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 	[ec2-user ~]$ sudo chkconfig httpd on
 	[ec2-user ~]$ chkconfig --list httpd   
 
-* The chkconfig command does not provide any confirmation message when you successfully use it to enable a service. You can verify that httpd dos on by running the following command:
+>Note: The chkconfig command does not provide any confirmation message when you successfully use it to enable a service. You can verify that httpd dos on by running the following command:
 
 ![7.png](/images/7.png)
 
