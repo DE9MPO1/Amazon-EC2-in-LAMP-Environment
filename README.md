@@ -72,7 +72,7 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 2.2. Click **Launch Instance**.
 
-2.3. In the navigation pane, choose **Quick Start**, in the row for the first **Amazon Linux AMI**, click **Select**.
+2.3. In the navigation pane, choose **Quick Start**, in the row for the second **Amazon Linux AMI 2018.03.0 (HVM)** which ami id is ami-cfe4b2b0, click **Select**.
 
 2.4. On **Step2: Choose a Instance Type** page,make sure **t2.micro** is selected and click **Next: Configure Instance Details**.
 
