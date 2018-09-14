@@ -146,12 +146,12 @@ The following procedures help you install an Apache web server with PHP and MySQ
 
 ### Connect to your instance (Linux/OSX only)
 
->Note: This section is for Linux and Max OSX users only. If you are running Windows but have not yet connected to your instance, go back to previous step. If you have already connected to your instance, skip ahead to next step.
+>Note: This section is for Linux and Mac OSX users only. If you are running Windows but have not yet connected to your instance, go back to the previous step. If you have already connected to your instance, skip ahead to next step.
 
 4.1. To connect to your EC2 instance, run the following commands in Terminal:
-	
-	chmod 400  <path and name of pem>
-	ssh –i <path and name of pem> ec2-user@<public IP>
+    
+    chmod 400  <path and name of pem>
+    ssh –i <path and name of pem> ec2-user@<public IP>
 
 * For **path and name of pem**, substitute the path/filename to the .pem file you downloaded.
 * For **public IP**, substitute the public IP address for your **Web Server** instance which you copied into a text editor earlier in the lab.
@@ -159,22 +159,22 @@ The following procedures help you install an Apache web server with PHP and MySQ
 ### Installing and start the Web server on EC2
 
 5.1. Update all your software package, enter:
-	
+    
     [ec2-user ~]$ sudo yum update -y
 
 5.2. Use yum install command to install multiple software packages and all related dependencies at the same time.
 
-	[ec2-user ~]$ sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+    [ec2-user ~]$ sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
 
 5.3. Start Apache web server.
 
-	[ec2-user ~]$ sudo service httpd start
-	Starting httpd: 				[ OK ]
+    [ec2-user ~]$ sudo service httpd start
+    Starting httpd:                 [ OK ]
 
 5.4. Use the **chkconfig** command to configure the Apache web server to start at each system boot.
 
-	[ec2-user ~]$ sudo chkconfig httpd on
-	[ec2-user ~]$ chkconfig --list httpd   
+    [ec2-user ~]$ sudo chkconfig httpd on
+    [ec2-user ~]$ chkconfig --list httpd   
 
 >Note: The chkconfig command does not provide any confirmation message when you successfully use it to enable a service. You can verify that httpd dos on by running the following command:
 
@@ -190,39 +190,39 @@ To allow the *ec2-user* account to manipulate files in this directory, you must 
 
 6.1. Add your user (ex. **ec2-user**) to the **apache** group
 
-	[ec2-user ~]$ sudo usermod -a -G apache ec2-user
+    [ec2-user ~]$ sudo usermod -a -G apache ec2-user
     
 6.2. Log out and log back in again, use **exit** command.
 
-	[ec2-user ~]$ exit
+    [ec2-user ~]$ exit
     
 6.3. Reconnect to your instance, and then run the following command to verify your membership in the **apache** group.
 
-	[ec2-user ~]$ groups 
+    [ec2-user ~]$ groups 
     ec2-user wheel apache
 
 ![9.png](/images/9.png)
 
 6.4. Change the group ownership of **/var/www** and its contents to the **apache** group.
 
-	[ec2-user ~]$ sudo chown -R ec2-user:apache /var/www
+    [ec2-user ~]$ sudo chown -R ec2-user:apache /var/www
 
 6.5. Change the directory permissions of **/var/www** and its subdirectories to add group write permissions and to set the group ID on future subdirectories.
 
-	[ec2-user ~]$ sudo chmod 2775 /var/www
-	[ec2-user ~]$ find /var/www -type d -exec sudo chmod 2775 {} \;
+    [ec2-user ~]$ sudo chmod 2775 /var/www
+    [ec2-user ~]$ find /var/www -type d -exec sudo chmod 2775 {} \;
 
 6.6. Recursively change the file permissions of /var/www and its subdirectories to add group write permissions.
 
-	[ec2-user ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;
+    [ec2-user ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;
     
 6.7. Add a simple PHP file in the Apache document root to test LAMP web server.
 
-	[ec2-user ~]$ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+    [ec2-user ~]$ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 
 6.8. In a web browser, enter the URL of the file you just created. This URL is the public DNS address of your EC2, for example:
 
-	http://my.public.dns.amazonaws.com/phpinfo.php
+    http://my.public.dns.amazonaws.com/phpinfo.php
 
 ![10.png](/images/10.png)
 
@@ -233,7 +233,7 @@ To allow the *ec2-user* account to manipulate files in this directory, you must 
 
 Congratulations! You now have learned how to:
 * Logged into Amazon Management Console
-* Create an Amazon Linux Instance from and Amazon Machine Image (AMI).
+* Create an Amazon Linux Instance from an Amazon Machine Image (AMI).
 * Find your instance in the Amazon Management Console
 * Logged into your instance
 
